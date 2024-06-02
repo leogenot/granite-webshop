@@ -1,0 +1,23 @@
+{
+    "name": "@moritzmla/nuxt-shopify-template",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare"
+    },
+    "devDependencies": {
+        "@nuxtjs/apollo": "^5.0.0-alpha.8",
+        "@tabler/icons-vue": "^2.47.0",
+        "@unocss/nuxt": "^0.57.7",
+        "@unocss/reset": "^0.57.7",
+        "@vue/apollo-composable": "^4.0.0-beta.11",
+        "nuxt": "^3.11.0",
+        "prettier": "^3.2.5",
+        "vue": "^3.4.21",
+        "vue-router": "^4.3.0"
+    }
+}
