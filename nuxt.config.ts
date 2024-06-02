@@ -1,11 +1,11 @@
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/apollo", "@unocss/nuxt"],
+    modules: ["@nuxtjs/apollo", "@nuxtjs/tailwindcss"],
 
     devtools: {
         enabled: false,
     },
 
-    css: ["@unocss/reset/tailwind.css"],
+    css: ['~/assets/css/main.css'],
 
     apollo: {
         clients: {
@@ -15,31 +15,31 @@ export default defineNuxtConfig({
         },
     },
 
-    unocss: {
-        rules: [
-            [
-                "grid-layout-main",
-                {
-                    "grid-template-rows": "min-content 1fr min-content",
-                },
-            ],
-        ],
-        safelist: ["overflow-y-scroll"],
-    },
+    // unocss: {
+    //     rules: [
+    //         [
+    //             "grid-layout-main",
+    //             {
+    //                 "grid-template-rows": "min-content 1fr min-content",
+    //             },
+    //         ],
+    //     ],
+    //     safelist: ["overflow-y-scroll"],
+    // },
 
     app: {
         head: {
-            title: "Acme Store",
+            title: "GRANITE.",
             link: [
                 {
                     rel: "icon",
-                    href: "/favicon.svg",
+                    href: "/favicon.ico",
                 },
             ],
             meta: [
                 {
                     name: "description",
-                    content: "Acme Store Description",
+                    content: "GRANITE. is a brand inspired by the outdoors.",
                 },
             ],
             htmlAttrs: {
@@ -49,5 +49,8 @@ export default defineNuxtConfig({
                 class: "overflow-y-scroll",
             },
         },
+    },
+    nitro: {
+        preset: 'netlify',
     },
 });

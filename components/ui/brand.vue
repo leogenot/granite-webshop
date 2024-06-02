@@ -1,7 +1,9 @@
 <template>
-    <div class="flex items-center gap-2">
-        <img loading="lazy" width="32" height="32" alt="Logo" src="/favicon.svg" />
+  <div class="flex items-center gap-2">
+    <img loading="lazy" width="32" height="32" alt="Logo" src="/favicon.ico" />
 
-        <NuxtLink to="/" class="font-semibold font-mono"> ACME STORE </NuxtLink>
-    </div>
+    <NuxtLink to="/" class="text-l font-display tracking-[0.15em] text-white">
+      GRANITE.
+    </NuxtLink>
+  </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink class="font-semibold hover:underline">
-        <slot />
-    </NuxtLink>
+  <NuxtLink class="font-text hover:underline">
+    <slot />
+  </NuxtLink>
 </template>

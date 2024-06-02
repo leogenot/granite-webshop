@@ -1,62 +1,40 @@
 <template>
-    <header
-        class="flex items-center justify-between p-4 gap-4 bg-white border-b border-slate-200 z-50"
-    >
-        <div class="flex items-center gap-4">
-            <UiBrand />
-
-            <hr class="w-px h-6 border-none bg-slate-200" />
-
-            <UiLink class="text-sm hover:underline" to="/collections"> Explore </UiLink>
-        </div>
-
-        <UiButton variant="text" class="text-sm" aria-label="Shopping Cart" to="/cart">
-            <IconShoppingCart width="22" height="22" />
-
-            <span class="hidden md:block"> Shopping Cart </span>
-        </UiButton>
-    </header>
-
-    <div class="flex flex-col">
-        <slot />
+  <header
+    class="fixed left-0 right-0 top-0 z-10 z-50 flex flex w-full flex-row content-center items-center justify-between justify-between gap-4 p-4 p-4 align-middle backdrop-blur-lg"
+  >
+    <div class="flex items-center gap-4">
+      <a href="#" class="text-l font-display tracking-[0.15em] text-white"
+        >GRANITE.</a
+      >
     </div>
 
-    <footer class="flex flex-col border-t border-slate-200">
-        <div
-            class="flex flex-col items-start gap-8 md:gap-12 md:flex-row mx-auto w-full max-w-6xl p-8"
-        >
-            <UiBrand />
+    <NuxtLink
+      class="flex flex-row gap-4 font-display text-sm text-white"
+      aria-label="Shopping Cart"
+      to="/cart"
+    >
+      <IconShoppingCart width="22" height="22" />
+      <span class="hidden md:block"> Cart </span>
+    </NuxtLink>
+  </header>
 
-            <div class="flex flex-col gap-2">
-                <UiLink :to="`/${page.node.handle}`" v-for="page in data?.pages.edges">
-                    {{ page.node.title }}
-                </UiLink>
-            </div>
-        </div>
+  <div class="flex flex-col bg-black text-white">
+    <slot />
+  </div>
 
-        <div
-            class="flex gap-2 flex-col md:flex-row items-center justify-between text-sm font-semibold border-t border-slate-200 p-4"
-        >
-            <UiButton variant="text" to="/">
-                <span class="px-2"> © {{ new Date().getFullYear() }} ACME </span>
-            </UiButton>
+  <footer class="flex flex-col border-t border-gray-800 bg-black">
+    <div
+      class="mx-auto flex w-full max-w-6xl flex-row justify-between gap-8 p-8 md:flex-row md:gap-12"
+    >
+      <UiBrand />
 
-            <div class="flex gap-2">
-                <UiButton
-                    variant="outline"
-                    target="_blank"
-                    aria-label="GitHub"
-                    to="https://github.com/moritzmla/nuxt-shopify-template"
-                >
-                    <IconBrandGithub width="20" height="20" />
-                </UiButton>
-
-                <UiButton target="_blank" to="https://moritzmla.com/">
-                    <span class="px-2"> Created by Moritz Müller </span>
-                </UiButton>
-            </div>
-        </div>
-    </footer>
+      <div class="flex flex-row gap-4 text-white">
+        <UiLink :to="`/${page.node.handle}`" v-for="page in data?.pages.edges">
+          {{ page.node.title }}
+        </UiLink>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script setup lang="ts">
