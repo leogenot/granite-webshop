@@ -1,5 +1,7 @@
 <template>
-  <div class="font-text flex flex-col items-start gap-4">
+  <div
+    class="flex flex-col items-start gap-4 font-text uppercase tracking-[0.025em]"
+  >
     <NuxtLink :to="`/products/${modelValue.handle}`">
       <img
         loading="lazy"
@@ -12,12 +14,15 @@
     </NuxtLink>
 
     <div class="flex flex-col">
-      <UiLink class="text-l" :to="`/products/${modelValue.handle}`">
+      <UiLink class="text-xs" :to="`/products/${modelValue.handle}`">
         {{ modelValue.title }}
       </UiLink>
 
-      <div>
-        <UiPrice :model-value="modelValue.priceRange.minVariantPrice" />
+      <div class="font-text text-xs uppercase tracking-[0.025em]">
+        <UiPrice
+          :model-value="modelValue.priceRange.minVariantPrice"
+          class="font-text text-xs uppercase tracking-[0.025em]"
+        />
       </div>
     </div>
   </div>

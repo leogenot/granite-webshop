@@ -1,5 +1,5 @@
 <template>
-    <p class="text-slate-500">
-        <slot />
-    </p>
+  <p class="font-text text-xs uppercase tracking-[0.025em]">
+    <slot />
+  </p>
 </template>
