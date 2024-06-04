@@ -19,7 +19,7 @@
     </NuxtLink>
   </header>
 
-  <div class="flex flex-col bg-white text-black">
+  <div class="flex flex-col bg-white text-gray-900">
     <slot />
   </div>
 
@@ -30,7 +30,7 @@
       <UiBrand />
 
       <div
-        class="flex flex-row gap-4 font-text text-xs font-light uppercase text-black"
+        class="flex flex-row gap-4 font-text text-xs font-light uppercase text-gray-900"
       >
         <UiLink :to="`/${page.node.handle}`" v-for="page in data?.pages.edges">
           {{ page.node.title }}

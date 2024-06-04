@@ -35,7 +35,7 @@ withDefaults(
 const variants: Record<Variant, string> = {
   primary:
     " text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 active:from-blue-400 active:to-blue-300 svg:stroke-white",
-  outline: "text-black border-solid border border-black",
+  outline: "text-gray-900 border-solid border border-gray-400",
   highlight:
     "bg-white text-stone-800 hover:bg-stone-800 active:bg-slate-100 border border-blue-500",
   text: "hover:bg-stone-800 active:bg-slate-100",
