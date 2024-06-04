@@ -1,5 +1,7 @@
 # Nuxt 3 Shopify Template
 
+granite-stdio.netlify.app
+
 A simple Shopify template built with Nuxt 3, providing a seamless development experience for creating modern and responsive online stores.
 
 ## Getting Started
