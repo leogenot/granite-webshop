@@ -1,6 +1,7 @@
 <template>
   <div
-    class="flex h-[100%] w-[100%] flex-row items-center justify-center gap-4"
+    class="flex h-[100%] w-[100%] flex-row items-center justify-center"
+    :class="{ 'flex-row-reverse': index % 2 === 1 }"
   >
     <NuxtLink
       :to="`/products/${modelValue.handle}`"
@@ -8,8 +9,8 @@
     >
       <img
         loading="lazy"
-        width="360"
-        height="360"
+        width="100%"
+        height="100%"
         class="aspect-square"
         :alt="modelValue.featuredImage.altText ?? modelValue.title"
         :src="modelValue.featuredImage.url + '&width=360'"
@@ -38,5 +39,6 @@ import type { ProductModel } from "~/types/shopify";
 
 defineProps<{
   modelValue: ProductModel;
+  index: number;
 }>();
 </script>

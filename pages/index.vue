@@ -15,14 +15,13 @@
     ></video>
   </div>
 
-  <UiCenter>
-    <div class="flex flex-col items-center gap-8 bg-white">
-      <ProductModel
-        :model-value="product.node"
-        v-for="product in data?.collection.products.edges"
-      />
-    </div>
-  </UiCenter>
+  <div class="flex flex-col items-center bg-white">
+    <ProductModel
+      :model-value="product.node"
+      :index="index"
+      v-for="(product, index) in data?.collection.products.edges"
+    />
+  </div>
 </template>
 
 <script setup>
