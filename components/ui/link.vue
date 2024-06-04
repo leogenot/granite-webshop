@@ -1,7 +1,5 @@
 <template>
-  <NuxtLink
-    class="font-text text-xs uppercase tracking-[0.025em] hover:underline"
-  >
+  <NuxtLink class="font-text text-xs uppercase">
     <slot />
   </NuxtLink>
 </template>

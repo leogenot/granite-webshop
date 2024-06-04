@@ -1,12 +1,10 @@
 <template>
-  <div
+  <UiLink
+    :to="`/products/${modelValue.handle}`"
     class="flex h-[100%] w-[100%] flex-row items-center justify-center"
     :class="{ 'flex-row-reverse': index % 2 === 1 }"
   >
-    <NuxtLink
-      :to="`/products/${modelValue.handle}`"
-      class="flex h-[50%] w-[50%] items-center justify-center"
-    >
+    <div class="flex h-[50%] w-[50%] items-center justify-center">
       <img
         loading="lazy"
         width="100%"
@@ -15,23 +13,20 @@
         :alt="modelValue.featuredImage.altText ?? modelValue.title"
         :src="modelValue.featuredImage.url + '&width=360'"
       />
-    </NuxtLink>
+    </div>
 
     <div
-      class="flex h-[50%] w-[50%] flex-col items-center justify-center font-text uppercase tracking-[0.025em]"
+      class="flex h-[50%] w-[50%] flex-col items-center justify-center p-20 font-text text-xs font-light uppercase"
     >
-      <UiLink class="text-xs font-bold" :to="`/products/${modelValue.handle}`">
-        {{ modelValue.title }}
-      </UiLink>
-
-      <div class="text-xs">
-        <UiPrice
-          :model-value="modelValue.priceRange.minVariantPrice"
-          class="text-xs"
-        />
+      <div class="flex flex-col gap-2">
+        <div>{{ modelValue.title }}</div>
+        <p>{{ modelValue.description }}</p>
+        <UiPrice :model-value="modelValue.priceRange.minVariantPrice" />
       </div>
+
+      <div></div>
     </div>
-  </div>
+  </UiLink>
 </template>
 
 <script setup lang="ts">

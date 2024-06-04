@@ -11,11 +11,10 @@
     </div>
 
     <NuxtLink
-      class="flex flex-row gap-4 font-text text-xs uppercase tracking-[0.025em] mix-blend-difference"
+      class="flex flex-row gap-4 font-text text-xs font-light uppercase mix-blend-difference"
       aria-label="Shopping Cart"
       to="/cart"
     >
-      <!-- <IconShoppingCart width="22" height="22" /> -->
       <span class="hidden md:block"> Cart </span>
     </NuxtLink>
   </header>
@@ -31,7 +30,7 @@
       <UiBrand />
 
       <div
-        class="flex flex-row gap-4 font-text text-xs uppercase tracking-[0.025em] text-black"
+        class="flex flex-row gap-4 font-text text-xs font-light uppercase text-black"
       >
         <UiLink :to="`/${page.node.handle}`" v-for="page in data?.pages.edges">
           {{ page.node.title }}

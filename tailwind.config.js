@@ -1,8 +1,8 @@
 export const theme = {
     extend: {
         fontFamily: {
-            display: ['"ClashDisplay-Medium"', 'Helvetica', 'sans-serif'],
-            text: ['"Inter-Light"', 'Helvetica', 'sans-serif'],
+            display: ['"ClashDisplay-Medium"', 'Helvetica', 'Arial', 'sans-serif'],
+            text: ['Helvetica', 'Arial', 'sans-serif'],
         },
         fontSize: {
             sm: "clamp(0.8rem, 0.17vi + 0.76rem, 0.89rem)",
