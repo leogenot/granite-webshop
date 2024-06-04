@@ -2,7 +2,7 @@
   <div ref="section" class="relative h-[100vh] w-screen bg-black">
     <h1
       ref="title"
-      class="z-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform font-display text-4xl tracking-[0.15em] text-white mix-blend-difference md:text-6xl"
+      class="z-1 pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform font-display text-4xl tracking-[0.15em] text-white mix-blend-difference md:text-6xl"
     >
       GRANITE.
     </h1>

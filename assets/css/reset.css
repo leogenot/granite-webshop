@@ -5,7 +5,6 @@
   font-weight: inherit;
   color: currentColor;
   font-variant-ligatures: none;
-  overflow: hidden;
 }
 
 :where(button),
