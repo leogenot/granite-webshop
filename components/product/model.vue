@@ -1,7 +1,7 @@
 <template>
   <UiLink
     :to="`/products/${modelValue.handle}`"
-    class="flex h-[100%] w-[100%] flex-row items-center justify-center"
+    class="flex h-[100%] w-[100%] flex-row justify-center"
     :class="{ 'flex-row-reverse': index % 2 === 1 }"
   >
     <div class="flex h-[50%] w-[50%] items-center justify-center">
@@ -16,15 +16,15 @@
     </div>
 
     <div
-      class="flex h-[50%] w-[50%] flex-col items-center justify-center p-20 font-text text-xs font-light uppercase"
+      class="flex w-[50%] flex-col items-center justify-between p-10 font-text text-xs font-light uppercase"
     >
-      <div class="flex flex-col gap-2">
+      <div class="mb-4 flex flex-col gap-2">
         <div>{{ modelValue.title }}</div>
         <p>{{ modelValue.description }}</p>
         <UiPrice :model-value="modelValue.priceRange.minVariantPrice" />
       </div>
 
-      <div></div>
+      <UiButton class="w-full" variant="outline"> See product </UiButton>
     </div>
   </UiLink>
 </template>
