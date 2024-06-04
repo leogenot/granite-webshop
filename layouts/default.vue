@@ -1,6 +1,6 @@
 <template>
   <header
-    class="fixed left-0 right-0 top-0 z-10 z-50 flex flex w-full flex-row content-center items-center justify-between justify-between gap-4 p-4 p-4 align-middle backdrop-blur-lg"
+    class="fixed left-0 right-0 top-0 z-10 flex w-full flex-row content-center items-center justify-between gap-4 p-4 align-middle backdrop-blur-lg md:pl-10 md:pr-10"
   >
     <div class="flex items-center gap-4">
       <a
@@ -15,7 +15,7 @@
       aria-label="Shopping Cart"
       to="/cart"
     >
-      <span class="hidden md:block"> Cart </span>
+      <span> Cart </span>
     </NuxtLink>
   </header>
 
