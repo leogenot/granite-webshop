@@ -1,8 +1,11 @@
 <template>
   <div
-    class="flex flex-col items-start gap-4 font-text uppercase tracking-[0.025em]"
+    class="flex h-[100%] w-[100%] flex-row items-center justify-center gap-4"
   >
-    <NuxtLink :to="`/products/${modelValue.handle}`">
+    <NuxtLink
+      :to="`/products/${modelValue.handle}`"
+      class="flex h-[50%] w-[50%] items-center justify-center"
+    >
       <img
         loading="lazy"
         width="360"
@@ -13,15 +16,17 @@
       />
     </NuxtLink>
 
-    <div class="flex flex-col">
-      <UiLink class="text-xs" :to="`/products/${modelValue.handle}`">
+    <div
+      class="flex h-[50%] w-[50%] flex-col items-center justify-center font-text uppercase tracking-[0.025em]"
+    >
+      <UiLink class="text-xs font-bold" :to="`/products/${modelValue.handle}`">
         {{ modelValue.title }}
       </UiLink>
 
-      <div class="font-text text-xs uppercase tracking-[0.025em]">
+      <div class="text-xs">
         <UiPrice
           :model-value="modelValue.priceRange.minVariantPrice"
-          class="font-text text-xs uppercase tracking-[0.025em]"
+          class="text-xs"
         />
       </div>
     </div>

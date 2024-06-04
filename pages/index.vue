@@ -1,5 +1,5 @@
 <template>
-  <div ref="section" class="relative h-[80vh] w-screen bg-black">
+  <div ref="section" class="relative h-[100vh] w-screen bg-black">
     <h1
       ref="title"
       class="z-1 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform font-display text-4xl tracking-[0.15em] text-white mix-blend-difference md:text-6xl"
@@ -16,9 +16,7 @@
   </div>
 
   <UiCenter>
-    <div
-      class="grid place-content-center gap-8 bg-black sm:grid-cols-2 md:grid-cols-3"
-    >
+    <div class="flex flex-col items-center gap-8 bg-white">
       <ProductModel
         :model-value="product.node"
         v-for="product in data?.collection.products.edges"
@@ -49,7 +47,7 @@ onMounted(() => {
       start: "top center",
       end: "bottom top",
       scrub: true,
-      markers: true,
+      markers: false,
     },
   });
 });
