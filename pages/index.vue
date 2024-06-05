@@ -23,12 +23,21 @@
       v-for="(product, index) in data?.collection.products.edges"
     />
   </div>
+
+  <div class="mx-32 mb-10 mt-52 flex flex-row items-center space-x-32 bg-white">
+    <InlineModel
+      :model-value="product.node"
+      v-for="product in data2?.collection.products.edges"
+    />
+  </div>
 </template>
 
 <script setup>
 import { gsap, ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
-const { data } = await useCollection("featured", 6);
+
+const { data } = await useCollection("featured", 4);
+const { data: data2 } = await useCollection("featured", 3);
 
 useSeoMeta({
   title: "GRANITE.",
