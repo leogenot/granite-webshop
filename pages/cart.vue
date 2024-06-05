@@ -1,6 +1,6 @@
 <template>
   <UiCenter>
-    <UiHeading> Your cart </UiHeading>
+    <UiHeading class="pt-10"> Your cart </UiHeading>
 
     <div class="grid h-full gap-8 md:grid-cols-2">
       <div class="flex flex-col gap-8">
@@ -24,9 +24,7 @@
           <div class="flex items-center justify-between">
             <UiParagraph> Taxes </UiParagraph>
 
-            <strong class="font-semibold">
-              <UiPrice :model-value="data?.cart.cost.totalTaxAmount" />
-            </strong>
+            <UiPrice :model-value="data?.cart.cost.totalTaxAmount" />
           </div>
 
           <div class="flex items-center justify-between">
@@ -38,9 +36,7 @@
           <div class="flex items-center justify-between">
             <UiParagraph> Total </UiParagraph>
 
-            <strong class="font-semibold">
-              <UiPrice :model-value="data?.cart.cost.totalAmount" />
-            </strong>
+            <UiPrice :model-value="data?.cart.cost.totalAmount" />
           </div>
 
           <UiButton

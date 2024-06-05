@@ -15,20 +15,20 @@
           {{ data?.product.description }}
         </UiParagraph>
 
-        <strong class="font-display text-lg">
+        <div class="font-display text-lg">
           <UiPrice
             :model-value="
               currentVariant?.node.price ??
               data?.product.priceRange.minVariantPrice
             "
           />
-        </strong>
+        </div>
 
         <div
           class="flex flex-col gap-2"
           v-for="option in data?.product.options"
         >
-          <h2 class="font-display font-semibold">
+          <h2 class="font-display">
             {{ option.name }}
           </h2>
 

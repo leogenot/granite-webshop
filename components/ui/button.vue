@@ -38,6 +38,6 @@ const variants: Record<Variant, string> = {
   outline: "text-gray-900 border-solid border border-gray-400",
   highlight:
     "bg-white text-stone-800 hover:bg-stone-800 active:bg-slate-100 border border-blue-500",
-  text: "hover:bg-stone-800 active:bg-slate-100",
+  text: "hover:bg-stone-800 hover:text-white active:bg-slate-100",
 };
 </script>

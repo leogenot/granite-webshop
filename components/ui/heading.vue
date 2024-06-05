@@ -1,5 +1,5 @@
 <template>
-  <h1 class="font-display text-3xl sm:text-4xl md:text-5xl">
+  <h1 class="font-text text-lg font-light uppercase tracking-[0.025em]">
     <slot />
   </h1>
 </template>
