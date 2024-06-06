@@ -4,7 +4,7 @@
     ref="container"
   >
     <p
-      class="absolute inset-0 z-10 flex items-center justify-center bg-transparent"
+      class="absolute font-display tracking-[0.15em] inset-0 z-10 flex items-center justify-center bg-transparent"
       :style="{ color: '#2847d4', fontSize: SCALE_FACTOR / 2.5 + 'px' }"
     >
       GRANITE
