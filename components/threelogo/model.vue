@@ -4,8 +4,8 @@
     ref="container"
   >
     <p
-      class="absolute font-display tracking-[0.15em] inset-0 z-10 flex items-center justify-center bg-transparent"
-      :style="{ color: '#2847d4', fontSize: SCALE_FACTOR / 2.5 + 'px' }"
+      class="absolute inset-0 z-10 flex items-center justify-center bg-transparent font-display tracking-[0.15em]"
+      :style="{ color: '#2847d4', fontSize: SCALE_FACTOR / 3 + 'px' }"
     >
       GRANITE
     </p>
@@ -113,16 +113,10 @@ export default {
         const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
         const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
 
-        const maxRotationX = Math.PI / 4;
-        const maxRotationY = Math.PI / 10;
-
-        const targetRotationX = -mouseY * maxRotationY;
-        const targetRotationY = mouseX * maxRotationX;
-
         const damping = 0.1;
 
-        logo.rotation.x += (targetRotationX - logo.rotation.x) * damping;
-        logo.rotation.y += (targetRotationY - logo.rotation.y) * damping;
+        logo.rotation.x += (-mouseY - logo.rotation.x) * damping;
+        logo.rotation.y += (-mouseX - logo.rotation.y) * damping;
       };
 
       window.addEventListener("resize", onWindowResize);
