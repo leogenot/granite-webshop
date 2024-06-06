@@ -10,7 +10,9 @@
         >
           <IconShoppingCart width="48" height="48" />
 
-          <p class="text-xl">Your cart is empty.</p>
+          <p class="font-text text-lg font-light uppercase tracking-[0.025em]">
+            Your cart is empty.
+          </p>
         </div>
         <CartLine
           :model-value="line.node"
@@ -61,6 +63,6 @@ const { data } = await useCart(cookie.value ?? "");
 const isEmpty = computed(() => data.value?.cart.lines.edges.length === 0);
 
 useSeoMeta({
-  title: "Cart - Acme Store",
+  title: "Cart - GRANITE.",
 });
 </script>

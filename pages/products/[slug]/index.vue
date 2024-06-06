@@ -196,7 +196,7 @@ useSeoMeta({
   title: () => {
     const title = data.value?.product.seo.title ?? data.value?.product.title;
 
-    return `${title} - Acme Store`;
+    return `${title} - GRANITE.`;
   },
   description: () => data.value?.product.description,
 });
