@@ -25,10 +25,10 @@
 
   <footer class="flex flex-col border-t border-gray-800 bg-white">
     <div
-      class="mx-auto flex w-full max-w-6xl flex-row justify-between gap-8 p-8 md:flex-row md:gap-12"
+      class="mx-auto flex w-full max-w-6xl flex-row items-center justify-between gap-8 p-8 md:flex-row md:gap-12"
     >
-      <UiBrand />
-
+      <ThreelogoModel />
+      <!-- <UiBrand /> -->
       <div
         class="flex flex-row gap-4 font-text text-xs font-light uppercase text-gray-900"
       >

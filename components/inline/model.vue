@@ -15,7 +15,7 @@
     </div>
 
     <div
-      class="flex flex-row items-center justify-between p-4 font-text text-xs font-light uppercase"
+      class="mt-2 flex flex-row items-center justify-between font-text text-xs font-light uppercase"
     >
       <div>{{ modelValue.title }}</div>
       <UiPrice :model-value="modelValue.priceRange.minVariantPrice" />
