@@ -2,7 +2,14 @@
   <div
     class="relative flex h-[10vh] w-[10vw] items-center justify-center"
     ref="container"
-  ></div>
+  >
+    <p
+      class="absolute inset-0 z-10 flex items-center justify-center bg-transparent"
+      :style="{ color: '#2847d4', fontSize: SCALE_FACTOR / 2.5 + 'px' }"
+    >
+      GRANITE
+    </p>
+  </div>
 </template>
 
 <script>
@@ -10,6 +17,11 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 export default {
+  data() {
+    return {
+      SCALE_FACTOR: 28,
+    };
+  },
   mounted() {
     this.$nextTick(() => {
       const CAMERA_CONFIG = {
@@ -17,7 +29,6 @@ export default {
         FAR: 1000,
         POSITION_Z: 1,
       };
-      const SCALE_FACTOR = 30;
       const AMBIENT_LIGHT_COLOR = 0xffffff;
       const AMBIENT_LIGHT_INTENSITY = 5;
       const blue = "rgb(40, 71, 212)";
@@ -66,8 +77,7 @@ export default {
       const loader = new GLTFLoader();
       loader.load("/models/granite.glb", (gtlf) => {
         logo = gtlf.scene;
-        console.log("zizi", container.clientWidth / SCALE_FACTOR);
-        const scale = container.clientWidth / SCALE_FACTOR;
+        const scale = container.clientWidth / this.SCALE_FACTOR;
         logo.scale.set(scale, scale, scale);
         scene.add(logo);
 
