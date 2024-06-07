@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/apollo", "@nuxtjs/tailwindcss"],
+    modules: ["@nuxtjs/apollo", "@nuxtjs/tailwindcss", '@nuxtjs/device'],
 
     devtools: {
         enabled: false,
@@ -49,6 +49,7 @@ export default defineNuxtConfig({
                 class: "overflow-y-scroll",
             },
         },
+        pageTransition: { name: 'page', mode: 'out-in' }
     },
     nitro: {
         preset: 'netlify',
