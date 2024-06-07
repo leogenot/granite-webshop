@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex h-[10vh] w-[10vw] items-center justify-center"
+    class="relative flex h-[100px] w-[100px] items-center justify-center sm:h-[120px] sm:w-[120px]"
     ref="container"
   >
     <p
