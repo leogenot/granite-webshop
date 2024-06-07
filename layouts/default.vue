@@ -27,8 +27,8 @@
     <div
       class="mx-auto flex w-full max-w-6xl flex-row items-center justify-between gap-8 p-8 md:flex-row md:gap-12"
     >
-      <ThreelogoModel />
-      <!-- <UiBrand /> -->
+      <ThreelogoModel v-if="$device.isDesktop" />
+      <UiBrand v-else />
       <div
         class="flex flex-row gap-4 font-text text-xs font-light uppercase text-gray-900"
       >

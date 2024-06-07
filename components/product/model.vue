@@ -1,10 +1,12 @@
 <template>
-  <UiLink
-    :to="`/products/${modelValue.handle}`"
+  <div
     class="flex h-[100%] w-[100%] flex-col justify-center md:flex-row"
     :class="{ 'md:flex-row-reverse': index % 2 === 1 }"
   >
-    <div class="flex h-[50%] items-center justify-center md:w-[50%]">
+    <UiLink
+      class="flex h-[50%] items-center justify-center md:w-[50%]"
+      :to="`/products/${modelValue.handle}`"
+    >
       <img
         loading="lazy"
         width="100%"
@@ -13,7 +15,7 @@
         :alt="modelValue.featuredImage.altText ?? modelValue.title"
         :src="modelValue.featuredImage.url + '&width=360'"
       />
-    </div>
+    </UiLink>
 
     <div
       class="flex flex-col items-center justify-between p-4 font-text text-xs font-light uppercase md:w-[50%] md:p-10"
@@ -24,9 +26,11 @@
         <UiPrice :model-value="modelValue.priceRange.minVariantPrice" />
       </div>
 
-      <UiButton class="w-full" variant="outline"> See product </UiButton>
+      <UiButton class="w-full" variant="outline">
+        <UiLink :to="`/products/${modelValue.handle}`"> See product </UiLink>
+      </UiButton>
     </div>
-  </UiLink>
+  </div>
 </template>
 
 <script setup lang="ts">
