@@ -24,7 +24,7 @@
     />
   </div>
 
-  <div class="mx-32 mb-10 mt-52 flex flex-row items-center space-x-32 bg-white">
+  <div class="flex flex-col items-center justify-between bg-white sm:flex-row">
     <InlineModel
       :model-value="product.node"
       v-for="product in data2?.collection.products.edges"

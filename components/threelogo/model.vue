@@ -15,7 +15,7 @@
 <script setup>
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { VertexNormalsHelper } from "three/examples/jsm/helpers/VertexNormalsHelper.js";
+// import { VertexNormalsHelper } from "three/examples/jsm/helpers/VertexNormalsHelper.js";
 const SCALE_FACTOR = 28;
 const container = ref(null);
 let helper, scene, logo, camera, renderer;
@@ -74,7 +74,7 @@ onMounted(() => {
     logo.scale.set(scale, scale, scale);
     scene.add(logo);
 
-    helper = new VertexNormalsHelper(logo.children[0], 0.5, 0xff0000);
+    // helper = new VertexNormalsHelper(logo.children[0], 0.5, 0xff0000);
     // scene.add(helper);
 
     logo.traverse((node) => {
@@ -117,7 +117,6 @@ const onMouseMove = (event) => {
   const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
   const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
   const damping = 0.1;
-
   logo.rotation.x += (mouseY - logo.rotation.x) * damping;
   logo.rotation.y += (-mouseX - logo.rotation.y) * damping;
 };

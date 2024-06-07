@@ -1,7 +1,7 @@
 <template>
   <UiLink
     :to="`/products/${modelValue.handle}`"
-    class="align-center flex h-[100%] w-[100%] flex-col justify-center"
+    class="align-center flex h-[100%] w-[100%] flex-col justify-center px-10 py-5 sm:m-10"
   >
     <div class="flex h-full w-full">
       <img
